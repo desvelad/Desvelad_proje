@@ -36,8 +36,8 @@ async def start(_, message: Message):
 )
 
 
-@Client.on_message(command("düzenleyen") & other_filters2)
-async def düzenleyen(_, message: Message):
+@Client.on_message(command("editör") & other_filters2)
+async def editör(_, message: Message):
     await message.reply_text(
         f"""🤠 Merhaba !!
 Ben **{bn}** ve aşağıda kaynak kodum 🙃
@@ -51,7 +51,7 @@ Sizler İçin En İyisi 😉
                         "Sohbet grup", url="https://t.me/sohbetskyfall"
                     ),
                     InlineKeyboardButton (
-                        "Düzenleyen 🇹🇷", url="https://t.me/EfsaneStar"
+                        "Editör 🇹🇷", url="https://t.me/EfsaneStar"
                     )
                 ]
             ]
