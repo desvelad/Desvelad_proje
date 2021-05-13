@@ -36,7 +36,7 @@ async def start(_, message: Message):
 )
 
 
-Mutlu Akış 😉
+Happy flow 😉
 """,
         reply_markup=InlineKeyboardMarkup(
             [
