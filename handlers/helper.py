@@ -20,10 +20,10 @@ async def helper(ok, message: Message):
 
 
 👮‍♂️ **Yönetici ve Özel Kullanıcıları Komutları :**
-⏸️ /durdur - **[Yalnızca Gruplar ]** > __Pause Voice Chat Music.__
-⏩ /devam - **[Yalnızca Gruplar ]** > __Resume Voice Chat Music.__
-⏭️ /atla - **[Yalnızca Gruplar ]** > __Skips the current Music Playing In Voice Chat.__
-🛑 /dur - **[Yalnızca Gruplar ]** > __Clears The Queue as well as ends Voice Chat Music.__""")
+⏸️ /durdur - **[Yalnızca Gruplar ]** > __Sesli Sohbet Müziğini Duraklat.__
+⏩ /devam - **[Yalnızca Gruplar ]** > __Sesli Sohbet Müziğine Devam Et.__
+⏭️ /atla - **[Yalnızca Gruplar ]** > __sesli sohbette çalan mevcut müziği geçer.__
+🛑 /dur - **[Yalnızca Gruplar ]** > __Sırayı temizler ve Sesli Sohbet Müziği'ni sona erdirir.__""")
 
 @Client.on_message(command("help") & other_filters)
 async def ghelp(_, message: Message):
