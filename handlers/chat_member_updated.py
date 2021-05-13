@@ -15,3 +15,4 @@ async def chat_member_updated(_, chat_member_updated: ChatMemberUpdated):
     else:
         if new.user.id in cache.admins[chat]:
             cache.admins[chat].remove(new.user.id)
+ 
