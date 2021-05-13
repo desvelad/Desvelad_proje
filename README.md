@@ -36,7 +36,7 @@ Get STRING_NAME from here:
 
 ⏩ /ytplay - **[ Yalnızca Gruplar]** > __Şarkıyı doğrudan YouTube Arama'dan çalar
 
-🇹🇷 /düzenleyen - **[ Bilgi ]** > __Düzenleyen kişi bilgisini gösterir
+🇹🇷 /owner - **[ Bilgi ]** > __Düzenleyen kişi bilgisini gösterir
 
 👮‍♂️ **Yönetici ve Özel Kullanıcıları Komutları :**
 ⏸️ /durdur - **[Yalnızca Gruplar ]** > __Pause Voice Chat Music
