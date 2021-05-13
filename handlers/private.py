@@ -109,7 +109,7 @@ async def a(client, message: Message):
         )
         print(str(e))
         return
-    await m.edit(f"**{bn} :-** 📥 Indiriyor...\n**Query :-** {okvai}")
+    await m.edit(f"**{bn} :-** 📥 Yükleniyor...\n**Query :-** {okvai}")
     try:
         with youtube_dl.YoutubeDL(ydl_opts) as ydl:
             info_dict = ydl.extract_info(link, download=False)
@@ -123,7 +123,7 @@ async def a(client, message: Message):
         await  message.reply_audio(audio_file, caption=rep, parse_mode='md',quote=False, title=title, duration=dur, thumb=thumb_name)
         await m.delete()
     except Exception as e:
-        m.edit(f"❌ hata !! \n\n{e}")
+        m.edit(f"❌ Hata !! \n\n{e}")
     try:
         os.remove(audio_file)
         os.remove(thumb_name)
