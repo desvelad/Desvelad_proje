@@ -68,7 +68,7 @@ async def ping(_, message: Message):
 )
 
 
-@Client.on_message(command("bul") & other_filters2)
+@Client.on_message(command("song") & other_filters2)
 @errors
 async def a(client, message: Message):
     query = ''
