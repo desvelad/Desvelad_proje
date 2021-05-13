@@ -33,7 +33,7 @@ async def oynat(_, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        text="🎵 Kanal",
+                        text="Kanal Mp3 🎶",
                         url="https://t.me/kanalEfsanestar")
                    
                 ]
@@ -78,7 +78,7 @@ async def oynat(_, message: Message):
 @errors
 async def play(_, message: Message):
 
-    lel = await message.reply(f"**{bn} :-** 🔎 Şarkı bulma...")
+    lel = await message.reply(f"**{bn} :-** 🔎 Şarkı buluyorum...")
     sender_id = message.from_user.id
     user_id = message.from_user.id
     sender_name = message.from_user.first_name
@@ -149,7 +149,7 @@ async def play(_, message: Message):
         position = await queues.put(message.chat.id, file=file_path)
         await message.reply_photo(
         photo=thumb_name, 
-        caption=f"**{bn} :-** Your requested song is **queued** at position #{position} !",
+        caption=f"**{bn} :-** İstediğiniz şarkı **sıraya** alındı #{alındı} !",
         reply_markup=keyboard2)
         return await lel.delete()
     else:
@@ -157,7 +157,7 @@ async def play(_, message: Message):
         await message.reply_photo(
         photo=thumb_name,
         reply_markup=keyboard,
-        caption="▶️ **Playing** here the song requested by {}".format(
+        caption="▶️ **Oynatılıyor** burada istenen şarkı {}".format(
         message.from_user.mention()
         ),
     )
