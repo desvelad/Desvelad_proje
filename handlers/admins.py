@@ -17,12 +17,12 @@ async def pause(_, message: Message):
     if (
             message.chat.id not in callsmusic.pytgcalls.active_calls
     ) or (
-            callsmusic.pytgcalls.active_calls[message.chat.id] == 'paused'
+            callsmusic.pytgcalls.active_calls[message.chat.id] == 'duraklatıldı'
     ):
         await message.reply_text(f"**{BN} :-** 🙄 Hiçbirşey oynamıyor!")
     else:
         callsmusic.pytgcalls.pause_stream(message.chat.id)
-        await message.reply_text(f"**{BN} :-** 🤐 Paused!")
+        await message.reply_text(f"**{BN} :-** 🤐 duraklatıldı!")
 
 
 @Client.on_message(command("resume") & other_filters)
