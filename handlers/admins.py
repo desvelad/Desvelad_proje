@@ -22,7 +22,7 @@ async def durdur(_, message: Message):
         await message.reply_text(f"**{BN} :-** 🙄 Hiçbirşey oynamıyor!")
     else:
         callsmusic.pytgcalls.durdur_stream(message.chat.id)
-        await message.reply_text(f"**{BN} :-** 🤐 duraklatıldı!")
+        await message.reply_text(f"**{BN} :-** 🤐 durduruldu!")
 
 
 @Client.on_message(command("devam") & other_filters)
