@@ -13,7 +13,7 @@ from helpers.decorators import errors, authorized_users_only
 @Client.on_message(command("durdur") & other_filters)
 @errors
 @authorized_users_only
-async def pause(_, message: Message):
+async def durdur(_, message: Message):
     if (
             message.chat.id not in callsmusic.pytgcalls.active_calls
     ) or (
@@ -21,31 +21,31 @@ async def pause(_, message: Message):
     ):
         await message.reply_text(f"**{BN} :-** 🙄 Hiçbirşey oynamıyor!")
     else:
-        callsmusic.pytgcalls.pause_stream(message.chat.id)
+        callsmusic.pytgcalls.durdur_stream(message.chat.id)
         await message.reply_text(f"**{BN} :-** 🤐 duraklatıldı!")
 
 
-@Client.on_message(command("resume") & other_filters)
+@Client.on_message(command("devam") & other_filters)
 @errors
 @authorized_users_only
-async def resume(_, message: Message):
+async def devam(_, message: Message):
     if (
             message.chat.id not in callsmusic.pytgcalls.active_calls
     ) or (
-            callsmusic.pytgcalls.active_calls[message.chat.id] == 'playing'
+            callsmusic.pytgcalls.active_calls[message.chat.id] == 'devam ettirildi'
     ):
-        await message.reply_text(f"**{BN} :-** 🙄 Nothing is paused!")
+        await message.reply_text(f"**{BN} :-** 🙄 Hiçbirşey duraklatılmadı!")
     else:
-        callsmusic.pytgcalls.resume_stream(message.chat.id)
-        await message.reply_text(f"**{BN} :-** 🥳 Resumed!")
+        callsmusic.pytgcalls.devam_stream(message.chat.id)
+        await message.reply_text(f"**{BN} :-** 🥳 devam ettirildi!")
 
 
-@Client.on_message(command("stop") & other_filters)
+@Client.on_message(command("dur") & other_filters)
 @errors
 @authorized_users_only
-async def stop(_, message: Message):
+async def dur(_, message: Message):
     if message.chat.id not in callsmusic.pytgcalls.active_calls:
-        await message.reply_text(f"**{BN} :-** 🙄 Nothing is streaming!")
+        await message.reply_text(f"**{BN} :-** 🙄 Hiçbir şey çalışmıyor!")
     else:
         try:
             callsmusic.queues.clear(message.chat.id)
@@ -53,15 +53,15 @@ async def stop(_, message: Message):
             pass
 
         callsmusic.pytgcalls.leave_group_call(message.chat.id)
-        await message.reply_text(f"**{BN} :-** ❌ Stopped streaming!")
+        await message.reply_text(f"**{BN} :-** ❌ Akışı durdurdu!")
 
 
-@Client.on_message(command("skip") & other_filters)
+@Client.on_message(command("atla") & other_filters)
 @errors
 @authorized_users_only
-async def skip(_, message: Message):
+async def atla(_, message: Message):
     if message.chat.id not in callsmusic.pytgcalls.active_calls:
-        await message.reply_text(f"**{BN} :-** 🙄 Nothing is playing to skip!")
+        await message.reply_text(f"**{BN} :-** 🙄 Atlamak için hiçbir şey oynamıyor!")
     else:
         callsmusic.queues.task_done(message.chat.id)
 
@@ -73,4 +73,4 @@ async def skip(_, message: Message):
                 callsmusic.queues.get(message.chat.id)["file"]
             )
 
-        await message.reply_text(f"**{BN} :-** 😬 Skipped the current song!")
+        await message.reply_text(f"**{BN} :-** 😬 Geçerli şarkıyı atladı!")
