@@ -36,7 +36,7 @@ async def start(_, message: Message):
 )
 
 
-Aşagıdaki linklere basınız 😉
+aşagıdaki linklere basınız 😉
 """,
         reply_markup=InlineKeyboardMarkup(
             [
