@@ -17,7 +17,7 @@ async def durdur(_, message: Message):
     if (
             message.chat.id not in callsmusic.pytgcalls.active_calls
     ) or (
-            callsmusic.pytgcalls.active_calls[message.chat.id] == 'duraklatıldı'
+            callsmusic.pytgcalls.active_calls[message.chat.id] == 'durduruldu'
     ):
         await message.reply_text(f"**{BN} :-** 🙄 Hiçbirşey oynamıyor!")
     else:
