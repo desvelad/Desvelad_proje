@@ -10,7 +10,7 @@ from helpers.filters import command, other_filters
 from helpers.decorators import errors, authorized_users_only
 
 
-@Client.on_message(command("pause") & other_filters)
+@Client.on_message(command("durdur") & other_filters)
 @errors
 @authorized_users_only
 async def pause(_, message: Message):
@@ -19,7 +19,7 @@ async def pause(_, message: Message):
     ) or (
             callsmusic.pytgcalls.active_calls[message.chat.id] == 'paused'
     ):
-        await message.reply_text(f"**{BN} :-** 🙄 Nothing is playing!")
+        await message.reply_text(f"**{BN} :-** 🙄 Hiçbirşey oynamıyor!")
     else:
         callsmusic.pytgcalls.pause_stream(message.chat.id)
         await message.reply_text(f"**{BN} :-** 🤐 Paused!")
