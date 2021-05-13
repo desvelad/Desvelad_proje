@@ -16,7 +16,7 @@ async def helper(ok, message: Message):
 ▶️ /oynat - **[ Yalnızca Gruplar ]** > __Yanıtlanan ses dosyasını veya YouTube videosunu bağlantı üzerinden çalar.__
 🔎 /bul - **[ Gruplar & İçinde]** > __Sohbette aranan şarkıyı yükler.__
 ⏩ /ytplay - **[ Yalnızca Gruplar]** > __Şarkıyı doğrudan YouTube Arama'dan çalar.__
-🇹🇷 /düzenleyen - **[ Bilgi ]** > __Düzenleyen kişi bilgisini gösterir.__
+🇹🇷 /editör - **[ Bilgi ]** > __Düzenleyen kişi bilgisini gösterir.__
 
 
 👮‍♂️ **Yönetici ve Özel Kullanıcıları Komutları :**
