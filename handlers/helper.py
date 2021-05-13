@@ -25,6 +25,6 @@ async def helper(ok, message: Message):
 ⚜️ /atla - **[Yalnızca Gruplar ]** > __Skips the current Music Playing In Voice Chat.__
 ⚜️ /dur - **[Yalnızca Gruplar ]** > __Clears The Queue as well as ends Voice Chat Music.__""")
 
-@Client.on_message(command("yardım") & other_filters)
-async def gyardım(_, message: Message):
+@Client.on_message(command("help") & other_filters)
+async def ghelp(_, message: Message):
     await message.reply_text(f"**{bn} :-** selam! Tüm komutları almak için beni PM bakınız 😉")
