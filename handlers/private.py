@@ -13,10 +13,10 @@ from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, 
 from config import BOT_NAME as bn, PLAY_PIC
 
 
-@Client.on_message(command("start") & other_filters2)
-async def start(_, message: Message):
+@Client.on_message(command("başlat") & other_filters2)
+async def başlat(_, message: Message):
     hell_pic = PLAY_PIC
-    hell = f"I am **{bn}** !!\nI let you play music in your group's voice chat 😉\nTo get all commands and their explanation do /help\n\nEnjoy Streaming Music 😉"
+    hell = f"Ben **{bn}** !!\nGrubun sesli sohbetinde müzik çalmana izin verdim. 😉\nTüm komutları ve açıklamalarını almak için /yardım\n\nMüzik Akışı keyfini çıkarın 😉"
     butts = InlineKeyboardMarkup(
         [
             [
@@ -36,25 +36,22 @@ async def start(_, message: Message):
 )
 
 
-@Client.on_message(command("repo") & other_filters2)
-async def repo(_, message: Message):
+@Client.on_message(command("düzenleyen") & other_filters2)
+async def düzenleyen(_, message: Message):
     await message.reply_text(
-        f"""🤠 Hoi!!
-I'm **{bn}** and below is the my source code 🙃
+        f"""🤠 Merhaba !!
+Ben **{bn}** ve aşağıda kaynak kodum 🙃
 
-Happy Streaming 😉
+Sizler İçin En İyisi 😉
 """,
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "Repo 📑", url="https://github.com/TheVaders/vc_bot"
-                    ),
-                    InlineKeyboardButton(
-                        "Kanal 📣", url="https://t.me/kanalEfsanestar"
+                        "Sohbet grup", url="https://t.me/sohbetskyfall"
                     ),
                     InlineKeyboardButton (
-                        "Sahip Editör 💠", url="https://t.me/EfsaneStar"
+                        "Düzenleyen 🇹🇷", url="https://t.me/EfsaneStar"
                     )
                 ]
             ]
@@ -67,11 +64,11 @@ async def ping(_, message: Message):
     hell_pic = PLAY_PIC
     await message.reply_photo(
     photo=hell_pic,
-    caption="I'm Alive and working fine. Do /help to get commands.\n\nHappy Streaming Music 😉",
+    caption="Yaşıyorum ve gayet iyi çalışıyorum.. yapmak /komutları alma yardımı.\n\nGüzel Müzik Akışı 😉",
 )
 
 
-@Client.on_message(command("song") & other_filters2)
+@Client.on_message(command("bul") & other_filters2)
 @errors
 async def a(client, message: Message):
     query = ''
@@ -108,11 +105,11 @@ async def a(client, message: Message):
             open(thumb_name, 'wb').write(thumb.content)
 
         except Exception as e:
-            m.edit(f"**{bn} :-** 😕 Found nothing. Try changing the spelling a little.\n\n{e}")
+            m.edit(f"**{bn} :-** 😕 Hiçbir şey bulamadım. Yazımı biraz değiştirmeyi deneyin.\n\n{e}")
             return
     except Exception as e:
         m.edit(
-           f"**{bn} :-** 😕 Found Nothing. Sorry.\n\nTry another keywork or maybe spell it properly."
+           f"**{bn} :-** 😕 Hiçbir şey bulamadım. pardon.\n\nTry another keywork or maybe spell it properly."
         )
         print(str(e))
         return
