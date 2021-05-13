@@ -9,14 +9,14 @@ from helpers.filters import command, other_filters2, other_filters
 @Client.on_message(command("help") & other_filters2)
 async def helper(ok, message: Message):
     await message.reply_text(
-        f"""💞 Merhaba! Aşağıdaki komutlar şunlardır: **{bn}** - __A Grup Sesli Sohbet Müzik Çaları__.
+        f"""💞 Merhaba! Aşağıdaki komutlar şunlardır: **{bn}** - __A Grup Sesli Sohbetinde Müzik Çalarım__.
 Şu anda desteklediğim komutlar şunlardır:
 
 👤 **Kullanıcı Komutları :**
 ▶️ /oynat - **[ Yalnızca Gruplar ]** > __Yanıtlanan ses dosyasını veya YouTube videosunu bağlantı üzerinden çalar.__
 🔎 /bul - **[ Gruplar & İçinde]** > __Sohbette aranan şarkıyı yükler.__
 ⏩ /ytplay - **[ Yalnızca Gruplar]** > __Şarkıyı doğrudan YouTube Arama'dan çalar.__
-🇹🇷 /editör - **[ Bilgi ]** > __Düzenleyen kişi bilgisini gösterir.__
+🇹🇷 /owner - **[ Bilgi ]** > __Düzenleyen kişi bilgisini gösterir.__
 
 
 👮‍♂️ **Yönetici ve Özel Kullanıcıları Komutları :**
