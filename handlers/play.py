@@ -61,7 +61,7 @@ async def oynat(_, message: Message):
 
     if message.chat.id in callsmusic.pytgcalls.active_calls:
         position = await queues.put(message.chat.id, file=file_path)
-        await lel.edit(f"**{bn} :-** #️⃣ Konumda sıraya alındı #{position} !")
+        await lel.edit(f"**{bn} :-** #️⃣ Konumda sıraya alındı #{alındı} !")
     else:
         callsmusic.pytgcalls.join_group_call(message.chat.id, file_path)
         await message.reply_photo(
