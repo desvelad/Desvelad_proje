@@ -21,7 +21,7 @@ async def durdur(_, message: Message):
     ):
         await message.reply_text(f"**{BN} :-** 🙄 Hiçbirşey oynamıyor!")
     else:
-        callsmusic.pytgcalls.durdur_stream(message.chat.id)
+        callsmusic.pytgcalls.pause_stream(message.chat.id)
         await message.reply_text(f"**{BN} :-** 🤐 durduruldu!")
 
 
@@ -36,7 +36,7 @@ async def devam(_, message: Message):
     ):
         await message.reply_text(f"**{BN} :-** 🙄 Hiçbirşey duraklatılmadı!")
     else:
-        callsmusic.pytgcalls.devam_stream(message.chat.id)
+        callsmusic.pytgcalls.resume_stream(message.chat.id)
         await message.reply_text(f"**{BN} :-** 🥳 devam ettirildi!")
 
 
