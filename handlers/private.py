@@ -16,7 +16,7 @@ from config import BOT_NAME as bn, PLAY_PIC
 @Client.on_message(command("start") & other_filters2)
 async def start(_, message: Message):
     hell_pic = PLAY_PIC
-    hell = f"Ben **{bn}** !!\nGrubun sesli sohbetinde müzik çalmana izin verdim. 😉\nTüm komutları ve açıklamalarını almak için /yardım\n\nMüzik Akışı keyfini çıkarın 😉"
+    hell = f"Ben **{bn}** !!\nGrubun sesli sohbetinde müzik çalmana izin verdim. 😉\nTüm komutları ve açıklamalarını almak için /help\n\nMüzik Akışı keyfini çıkarın 😉"
     butts = InlineKeyboardMarkup(
         [
             [
@@ -36,11 +36,11 @@ async def start(_, message: Message):
 )
 
 
-@Client.on_message(command("editör") & other_filters2)
-async def editör(_, message: Message):
+@Client.on_message(command("owner") & other_filters2)
+async def owner(_, message: Message):
     await message.reply_text(
         f"""🤠 Merhaba !!
-Ben **{bn}** ve aşağıda kaynak kodum 🙃
+Ben **{bn}** ve aşağıda bilgim 👤
 
 Sizler İçin En İyisi 😉
 """,
@@ -51,7 +51,7 @@ Sizler İçin En İyisi 😉
                         "Sohbet grup", url="https://t.me/sohbetskyfall"
                     ),
                     InlineKeyboardButton (
-                        "Editör 🇹🇷", url="https://t.me/EfsaneStar"
+                        "Owner 🇹🇷", url="https://t.me/EfsaneStar"
                     )
                 ]
             ]
