@@ -16,7 +16,7 @@
     "BOT_NAME": {
       "description": "Your MusicPlayer Bot Name.",
       "required": false,
-      "value": "Hêllẞø†"
+      "value": "Türkish Voice Müzik"
     },
     "API_ID": {
       "description": "App ID from my.telegram.org/apps",
@@ -38,7 +38,7 @@
     "DURATION_LIMIT": {
       "description": "Max audio duration limit for downloads (minutes).",
       "required": true,
-      "value": "10"
+      "value": "60"
     }
   }
 }
