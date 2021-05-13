@@ -13,8 +13,8 @@ from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, 
 from config import BOT_NAME as bn, PLAY_PIC
 
 
-@Client.on_message(command("başlat") & other_filters2)
-async def başlat(_, message: Message):
+@Client.on_message(command("start") & other_filters2)
+async def start(_, message: Message):
     hell_pic = PLAY_PIC
     hell = f"Ben **{bn}** !!\nGrubun sesli sohbetinde müzik çalmana izin verdim. 😉\nTüm komutları ve açıklamalarını almak için /yardım\n\nMüzik Akışı keyfini çıkarın 😉"
     butts = InlineKeyboardMarkup(
