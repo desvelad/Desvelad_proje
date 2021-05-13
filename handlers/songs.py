@@ -19,7 +19,7 @@ async def a(client, message: Message):
         query += ' ' + str(i)
     okvai = query.capitalize()
     print(query.capitalize())
-    m = await message.reply(f"**{Bn} :-** 🔍 Searching for {okvai}")
+    m = await message.reply(f"**{Bn} :-** 🔍 Araştırılıyor {okvai}")
     ydl_opts = {"format": "bestaudio[ext=m4a]"}
     try:
         results = []
@@ -48,15 +48,15 @@ async def a(client, message: Message):
             open(thumb_name, 'wb').write(thumb.content)
 
         except Exception as e:
-            m.edit(f"**{Bn} :-** 😕 Found nothing. Try changing the spelling a little.\n\n{e}")
+            m.edit(f"**{Bn} :-** 😕 Hiçbir şey bulamadım. Yazımı biraz değiştirmeyi deneyin.\n\n{e}")
             return
     except Exception as e:
         m.edit(
-           f"**{Bn} :-** 😕 Found Nothing. Sorry.\n\nTry another keywork or maybe spell it properly."
+           f"**{Bn} :-** 😕 Hiçbir şey bulamadım. Üzgünüz.\n\n Başka bir anahtarlık deneyin veya düzgün yazabilirsiniz."
         )
         print(str(e))
         return
-    await m.edit(f"**{Bn} :-** 📥 Downloading...\n**Query :-** {query}")
+    await m.edit(f"**{Bn} :-** 📥 Yükleniyor...\n**Query :-** {query}")
     try:
         with youtube_dl.YoutubeDL(ydl_opts) as ydl:
             info_dict = ydl.extract_info(link, download=False)
@@ -70,7 +70,7 @@ async def a(client, message: Message):
         await  message.reply_audio(audio_file, caption=rep, parse_mode='md',quote=False, title=title, duration=dur, thumb=thumb_name)
         await m.delete()
     except Exception as e:
-        m.edit(f"❌ Error!! \n\n{e}")
+        m.edit(f"❌ Hata!! \n\n{e}")
     try:
         os.remove(audio_file)
         os.remove(thumb_name)
