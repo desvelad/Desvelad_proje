@@ -34,10 +34,6 @@ async def start(_, message: Message):
     reply_markup=butts,
     caption=hell,
 )
-
-
-aşagıdaki linklere basınız 😉
-""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
