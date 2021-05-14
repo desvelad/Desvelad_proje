@@ -48,7 +48,7 @@ Sizler İçin En İyisi 😉
             [
                 [
                     InlineKeyboardButton(
-                        "Sohbet grup", url="https://t.me/sohbetskyfall"
+                        "Sohbet grup", url="https://t.me/RgSohbet"
                     ),
                     InlineKeyboardButton (
                         "Owner 🇹🇷", url="https://t.me/EfsaneStar"
