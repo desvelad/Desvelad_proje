@@ -21,10 +21,10 @@ async def start(_, message: Message):
         [
             [
                 InlineKeyboardButton(
-                    "Mekan 💬", url="https://t.me/sohbetskyfall"
+                    "Sohbet Grup 💬", url="https://t.me/RgSohbet"
                 ),
                 InlineKeyboardButton(
-                    "Kanal 📣", url="https://t.me/kanalEfsanestar"
+                    "Kanal 📣", url="https://t.me/RgChannell"
                 )
             ]
         ]
@@ -48,7 +48,7 @@ Sizler İçin En İyisi 😉
             [
                 [
                     InlineKeyboardButton(
-                        "Sohbet grup", url="https://t.me/RgSohbet"
+                        "Support ⚒️", url="https://t.me/RgSupportt"
                     ),
                     InlineKeyboardButton (
                         "Owner Sahip🇹🇷", url="https://t.me/Mehmett_12"
