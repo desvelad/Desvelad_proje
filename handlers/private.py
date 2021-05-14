@@ -51,7 +51,7 @@ Sizler İçin En İyisi 😉
                         "Support ⚒️", url="https://t.me/RgSupportt"
                     ),
                     InlineKeyboardButton (
-                        "Owner Sahip🇹🇷", url="https://t.me/Mehmett_12"
+                        "Owner Sahip 🇹🇷", url="https://t.me/Mehmett_12"
                     )
                 ]
             ]
