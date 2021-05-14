@@ -51,7 +51,7 @@ Sizler İçin En İyisi 😉
                         "Sohbet grup", url="https://t.me/RgSohbet"
                     ),
                     InlineKeyboardButton (
-                        "Owner 🇹🇷", url="https://t.me/EfsaneStar"
+                        "Owner Sahip🇹🇷", url="https://t.me/Mehmett_12"
                     )
                 ]
             ]
